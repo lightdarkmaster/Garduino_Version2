@@ -1,11 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:garduino_dashboard/const.dart';
 import 'package:garduino_dashboard/responsive.dart';
 import 'package:garduino_dashboard/widgets/custom_card.dart';
-
-import '../../../const.dart';
-import '../../../const.dart';
 
 class LineChartCard extends StatelessWidget {
   LineChartCard({super.key});

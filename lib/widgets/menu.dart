@@ -1,7 +1,13 @@
+// ignore_for_file: library_private_types_in_public_api, deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:garduino_dashboard/Responsive.dart';
+import 'package:garduino_dashboard/main.dart';
 import 'package:garduino_dashboard/model/menu_modal.dart';
 import 'package:flutter_svg/svg.dart';
+
+import 'controller_page.dart';
+import 'aboutUs.dart';
 
 class Menu extends StatefulWidget {
   final GlobalKey<ScaffoldState> scaffoldKey;
@@ -64,6 +70,53 @@ class _MenuState extends State<Menu> {
                       selected = i;
                     });
                     widget.scaffoldKey.currentState!.closeDrawer();
+
+                    // Navigate to the corresponding page
+                    switch (i) {
+                      case 0: // Dashboard
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: (context) => const MyApp()),
+                        );
+                        break;
+                      case 1: // Controller
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: (context) => const ControllerPage()),
+                        );
+                        break;
+                      // Add similar cases for other menu items
+                      case 2: //Connect
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: (context) => const ControllerPage()),
+                        );
+                        break;
+                      case 3: //Notification
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: (context) => const ControllerPage()),
+                        );
+                        break;
+                      case 4: //History
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: (context) => const ControllerPage()),
+                        );
+                        break;
+                      case 5: //Settings
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: (context) => const ControllerPage()),
+                        );
+                        break;
+                      case 6: //About Us
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: (context) => const AboutUsPage()),
+                        );
+                        break;
+                    }
                   },
                   child: Row(
                     children: [
