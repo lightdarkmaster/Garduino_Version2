@@ -116,6 +116,12 @@ class _MenuState extends State<Menu> {
                               builder: (context) => const AboutUsPage()),
                         );
                         break;
+                      case 7: //Exit
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: (context) => const AboutUsPage()),
+                        );
+                        break;
                     }
                   },
                   child: Row(
