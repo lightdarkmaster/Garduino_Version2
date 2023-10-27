@@ -1,6 +1,7 @@
 // ignore_for_file: library_private_types_in_public_api, deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:garduino_dashboard/Responsive.dart';
 import 'package:garduino_dashboard/main.dart';
 import 'package:garduino_dashboard/model/menu_modal.dart';
@@ -117,11 +118,7 @@ class _MenuState extends State<Menu> {
                         );
                         break;
                       case 7: //Exit
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                              builder: (context) => const AboutUsPage()),
-                        );
-                        break;
+                        SystemNavigator.pop();
                     }
                   },
                   child: Row(
