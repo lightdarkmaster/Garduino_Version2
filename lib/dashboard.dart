@@ -43,3 +43,4 @@ class DashBoard extends StatelessWidget {
   }
 }
 //add pages in each control page..
+//TODO: Add control pages.
