@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dashboard.flutter.app.garduino_dashboard">
    <application
-        android:label="garduino_dashboard"
+        android:label="Garduino"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
         <activity
@@ -32,3 +32,4 @@
             android:value="2" />
     </application>
 </manifest>
+//change the android label: Garduino
