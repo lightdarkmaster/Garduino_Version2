@@ -25,6 +25,14 @@ class ResultScreen extends StatelessWidget {
               buttonText,
               style: const TextStyle(fontSize: 18),
             ),
+            const SizedBox(height: 20), // Add spacing
+            ElevatedButton(
+              onPressed: () {
+                // Navigate back to the previous page
+                Navigator.pop(context);
+              },
+              child: const Text('Ok', style: TextStyle(fontSize: 18)),
+            ),
           ],
         ),
       ),

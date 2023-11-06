@@ -1,8 +1,12 @@
-// ignore_for_file: library_private_types_in_public_api, deprecated_member_use, avoid_print
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'result_screen.dart';
+
+void main() {
+  runApp(const MaterialApp(
+    home: ControllerPage(),
+  ));
+}
 
 class ControllerPage extends StatefulWidget {
   const ControllerPage({Key? key}) : super(key: key);
@@ -39,7 +43,7 @@ class _ControllerPageState extends State<ControllerPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Controller Page'),
-        backgroundColor: const Color(0xFF21222D),
+        backgroundColor: Colors.black, // Use a modern color scheme
       ),
       body: Center(
         child: Column(
@@ -48,10 +52,15 @@ class _ControllerPageState extends State<ControllerPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text('Lights'),
+                const Text(
+                  'Lights',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
                 Switch(
                   value: _isDeviceOn,
                   onChanged: (newValue) => _toggleDevicePower(),
+                  activeColor:
+                      Colors.green, // Use a modern color for the switch
                 ),
               ],
             ),
@@ -60,118 +69,35 @@ class _ControllerPageState extends State<ControllerPage> {
               alignment: WrapAlignment.center,
               spacing: 10, // Horizontal spacing between buttons
               children: [
-                ElevatedButton(
-                  onPressed: () => _onButtonPressed('Windows Open Sucessfully'),
-                  style: ElevatedButton.styleFrom(
-                    primary: const Color(0xFF21222D),
-                    side: const BorderSide(color: Colors.white),
-                    minimumSize: Size(buttonSize, buttonSize),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SvgPicture.asset(
-                        'assets/svg/window.svg', // Replace with your SVG icon pathicon: 'assets/svg/home.svg',
-                        color:
-                            Colors.white, // Apply color to the icon if needed
-                        width: 48, // Adjust the width of the SVG
-                        height: 48, // Adjust the height of the SVG
-                      ),
-                      const SizedBox(height: 8),
-                      const Text('Windows Open'),
-                    ],
-                  ),
+                _buildButton(
+                  'assets/svg/window.svg',
+                  'Windows Open',
+                  () => _onButtonPressed('Windows Open Successfully'),
+                  buttonSize,
                 ),
-
-                ElevatedButton(
-                  onPressed: () =>
-                      _onButtonPressed('Windows Close Sucessfully'),
-                  style: ElevatedButton.styleFrom(
-                    primary: const Color(0xFF21222D),
-                    side: const BorderSide(color: Colors.white),
-                    minimumSize: Size(buttonSize, buttonSize),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SvgPicture.asset(
-                        'assets/svg/window_close.svg', // Replace with your SVG icon pathicon: 'assets/svg/home.svg',
-                        color:
-                            Colors.white, // Apply color to the icon if needed
-                        width: 48, // Adjust the width of the SVG
-                        height: 48, // Adjust the height of the SVG
-                      ),
-                      const SizedBox(height: 8),
-                      const Text('Windows Close'),
-                    ],
-                  ),
+                _buildButton(
+                  'assets/svg/window_close.svg',
+                  'Windows Close',
+                  () => _onButtonPressed('Windows Close Successfully'),
+                  buttonSize,
                 ),
-                ElevatedButton(
-                  onPressed: () => _onButtonPressed('Watering in Progress..'),
-                  style: ElevatedButton.styleFrom(
-                    primary: const Color(0xFF21222D),
-                    side: const BorderSide(color: Colors.white),
-                    minimumSize: Size(buttonSize, buttonSize),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SvgPicture.asset(
-                        'assets/svg/water.svg', // Replace with your SVG icon pathicon: 'assets/svg/home.svg',
-                        color:
-                            Colors.white, // Apply color to the icon if needed
-                        width: 48, // Adjust the width of the SVG
-                        height: 48, // Adjust the height of the SVG
-                      ),
-                      const SizedBox(height: 8),
-                      const Text('Water Plant'),
-                    ],
-                  ),
+                _buildButton(
+                  'assets/svg/water.svg',
+                  'Water Plant',
+                  () => _onButtonPressed('Watering in Progress...'),
+                  buttonSize,
                 ),
-
-                ElevatedButton(
-                  onPressed: () => _onButtonPressed('Fan Turn On Sucessfully'),
-                  style: ElevatedButton.styleFrom(
-                    primary: const Color(0xFF21222D),
-                    side: const BorderSide(color: Colors.white),
-                    minimumSize: Size(buttonSize, buttonSize),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SvgPicture.asset(
-                        'assets/svg/fan_open.svg', // Replace with your SVG icon pathicon: 'assets/svg/home.svg',
-                        color:
-                            Colors.white, // Apply color to the icon if needed
-                        width: 48, // Adjust the width of the SVG
-                        height: 48, // Adjust the height of the SVG
-                      ),
-                      const SizedBox(height: 8),
-                      const Text('Fan On'),
-                    ],
-                  ),
+                _buildButton(
+                  'assets/svg/fan_open.svg',
+                  'Fan On',
+                  () => _onButtonPressed('Fan Turn On Successfully'),
+                  buttonSize,
                 ),
-                ElevatedButton(
-                  onPressed: () => _onButtonPressed('Fan Turn Off Sucessfully'),
-                  style: ElevatedButton.styleFrom(
-                    primary: const Color(0xFF21222D),
-                    side: const BorderSide(color: Colors.white),
-                    minimumSize: Size(buttonSize, buttonSize),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SvgPicture.asset(
-                        'assets/svg/fan_close.svg', // Replace with your SVG icon pathicon: 'assets/svg/home.svg',
-                        color:
-                            Colors.white, // Apply color to the icon if needed
-                        width: 48, // Adjust the width of the SVG
-                        height: 48, // Adjust the height of the SVG
-                      ),
-                      const SizedBox(height: 8),
-                      const Text('Fan Off'),
-                    ],
-                  ),
+                _buildButton(
+                  'assets/svg/fan_close.svg',
+                  'Fan Off',
+                  () => _onButtonPressed('Fan Turn Off Successfully'),
+                  buttonSize,
                 ),
                 // Add more buttons here
               ],
@@ -181,12 +107,36 @@ class _ControllerPageState extends State<ControllerPage> {
       ),
     );
   }
-}
 
-void main() {
-  runApp(
-    const MaterialApp(
-      home: ControllerPage(),
-    ),
-  );
+  Widget _buildButton(
+    String iconPath,
+    String label,
+    void Function() onPressed,
+    double buttonSize,
+  ) {
+    return ElevatedButton(
+      onPressed: onPressed,
+      style: ElevatedButton.styleFrom(
+        primary: const Color(0xFF21222D),
+        side: const BorderSide(color: Colors.white),
+        minimumSize: Size(buttonSize, buttonSize),
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          SvgPicture.asset(
+            iconPath,
+            color: Colors.white, // Apply color to the icon if needed
+            width: 48, // Adjust the width of the SVG
+            height: 48, // Adjust the height of the SVG
+          ),
+          const SizedBox(height: 8),
+          Text(
+            label,
+            style: const TextStyle(fontSize: 14), // Use a modern font size
+          ),
+        ],
+      ),
+    );
+  }
 }
