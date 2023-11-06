@@ -65,9 +65,8 @@ class _ControllerPageState extends State<ControllerPage> {
               ],
             ),
             const SizedBox(height: 20), // Add spacing between sections
-            Wrap(
-              alignment: WrapAlignment.center,
-              spacing: 10, // Horizontal spacing between buttons
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 _buildButton(
                   'assets/svg/window.svg',
@@ -81,6 +80,12 @@ class _ControllerPageState extends State<ControllerPage> {
                   () => _onButtonPressed('Windows Close Successfully'),
                   buttonSize,
                 ),
+              ],
+            ),
+            const SizedBox(height: 10), // Adjust spacing
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
                 _buildButton(
                   'assets/svg/water.svg',
                   'Water Plant',
@@ -99,9 +104,9 @@ class _ControllerPageState extends State<ControllerPage> {
                   () => _onButtonPressed('Fan Turn Off Successfully'),
                   buttonSize,
                 ),
-                // Add more buttons here
               ],
             ),
+            // Add more buttons here
           ],
         ),
       ),
