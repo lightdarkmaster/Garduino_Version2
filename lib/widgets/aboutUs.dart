@@ -48,3 +48,4 @@ class AboutUsPage extends StatelessWidget {
     );
   }
 }
+//this all about the about us sections of the application..
