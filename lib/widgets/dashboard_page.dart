@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const dashboard_page());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+// ignore: camel_case_types
+class dashboard_page extends StatelessWidget {
+  const dashboard_page({super.key});
 
   @override
   Widget build(BuildContext context) {
