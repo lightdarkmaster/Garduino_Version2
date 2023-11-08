@@ -25,18 +25,18 @@ class DashboardPage extends StatefulWidget {
 class _DashboardPageState extends State<DashboardPage> {
   // Sample data for the line chart
   List<FlSpot> dataPoints = [
-    FlSpot(0, 5),
-    FlSpot(1, 10),
-    FlSpot(2, 8),
-    FlSpot(3, 15),
-    FlSpot(4, 12),
+    const FlSpot(0, 5),
+    const FlSpot(1, 10),
+    const FlSpot(2, 8),
+    const FlSpot(3, 15),
+    const FlSpot(4, 12),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Real-time Dashboard'),
+        title: const Text('Real-time Dashboard'),
       ),
       body: Center(
         child: Column(
