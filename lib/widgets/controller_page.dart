@@ -12,6 +12,7 @@ class ControllerPage extends StatefulWidget {
   const ControllerPage({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _ControllerPageState createState() => _ControllerPageState();
 }
 
@@ -44,6 +45,13 @@ class _ControllerPageState extends State<ControllerPage> {
       appBar: AppBar(
         title: const Text('Controller Page'),
         backgroundColor: Colors.black, // Use a modern color scheme
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(
+                context); // Navigating back to the previous page (menu page).
+          },
+        ),
       ),
       body: Center(
         child: Column(
@@ -145,5 +153,3 @@ class _ControllerPageState extends State<ControllerPage> {
     );
   }
 }
-
-//add some feratures

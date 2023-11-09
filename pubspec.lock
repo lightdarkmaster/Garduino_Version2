@@ -105,6 +105,38 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.17.0"
+  connectivity:
+    dependency: "direct main"
+    description:
+      name: connectivity
+      sha256: a8e91263cf3e25fb5cc95e19dfde4999e32a648ac3b9e8a558a28165731678f8
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.6"
+  connectivity_for_web:
+    dependency: transitive
+    description:
+      name: connectivity_for_web
+      sha256: "01a390c1d5adc2ed1fa1f52d120c07fe9fd01166a93f965a832fd6cfc0ea6482"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.4.0+1"
+  connectivity_macos:
+    dependency: transitive
+    description:
+      name: connectivity_macos
+      sha256: "51ae08d5162eca9669b9d8951ed83ce19c5355a81149f94e4dee2740beb93628"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.1+2"
+  connectivity_platform_interface:
+    dependency: transitive
+    description:
+      name: connectivity_platform_interface
+      sha256: "2d82e942df9d49f29a24bb07fb5ce085d4a53e47818c62364d2b6deb9e0d7a8e"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.1"
   convert:
     dependency: transitive
     description:
@@ -541,6 +573,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.4"
+  wifi:
+    dependency: "direct main"
+    description:
+      name: wifi
+      sha256: "50b3df330321f7ed505bce9dd82d1835d709349ececb8882dc4c1674fe2dc5a8"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.5"
+  wifi_info_flutter:
+    dependency: "direct main"
+    description:
+      name: wifi_info_flutter
+      sha256: "9662240e4edb8a91b572efa0b4e4c72ee644e25611525633580afc3257386a48"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.2"
+  wifi_info_flutter_platform_interface:
+    dependency: transitive
+    description:
+      name: wifi_info_flutter_platform_interface
+      sha256: "844a9a5f23d1a639cf5fd8b4f007ee4d60526ad63beb35e1cbe2512f1a9921e4"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.1"
   xml:
     dependency: transitive
     description:
