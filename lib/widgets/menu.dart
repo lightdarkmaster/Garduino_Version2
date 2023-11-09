@@ -24,7 +24,7 @@ class _MenuState extends State<Menu> {
   List<MenuModel> menu = [
     MenuModel(icon: 'assets/svg/home.svg', title: "Dashboard"),
     MenuModel(icon: 'assets/svg/remote.svg', title: "Controller"),
-    MenuModel(icon: 'assets/svg/share-2.svg', title: "Connect"),
+    //MenuModel(icon: 'assets/svg/share-2.svg', title: "Connect"),
     MenuModel(icon: 'assets/svg/bell.svg', title: "Notification"),
     MenuModel(icon: 'assets/svg/history.svg', title: "History"),
     MenuModel(icon: 'assets/svg/setting.svg', title: "Settings"),
@@ -88,13 +88,7 @@ class _MenuState extends State<Menu> {
                         );
                         break;
                       // Add similar cases for other menu items
-                      case 2: //Connect
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                              builder: (context) => const ControllerPage()),
-                        );
-                        break;
-                      case 3: //Notification
+                      case 2: //Notification
                         Navigator.of(context).push(
                           MaterialPageRoute(
                               builder: (context) => const ControllerPage()),
