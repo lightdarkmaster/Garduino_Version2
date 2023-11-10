@@ -7,6 +7,7 @@ import 'package:garduino_dashboard/main.dart';
 import 'package:garduino_dashboard/model/menu_modal.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:garduino_dashboard/widgets/dashboard_page.dart';
+import 'package:garduino_dashboard/widgets/settings_page.dart';
 
 import 'controller_page.dart';
 import 'aboutUs.dart';
@@ -103,7 +104,7 @@ class _MenuState extends State<Menu> {
                       case 4: //Settings
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                              builder: (context) => DashboardPage()),
+                              builder: (context) => const SettingsPage2()),
                         );
                         break;
                       case 5: //About Us
