@@ -58,22 +58,6 @@ class Header extends StatelessWidget {
                 ),
               ),
             ),
-          if (Responsive.isMobile(context))
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                InkWell(
-                  onTap: () => scaffoldKey.currentState!.openEndDrawer(),
-                  child: CircleAvatar(
-                    backgroundColor: Colors.transparent,
-                    child: Image.asset(
-                      "assets/images/avatar.png",
-                      width: 32,
-                    ),
-                  ),
-                )
-              ],
-            ),
         ],
       ),
     );
