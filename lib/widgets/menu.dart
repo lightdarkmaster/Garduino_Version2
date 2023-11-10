@@ -94,25 +94,25 @@ class _MenuState extends State<Menu> {
                               builder: (context) => const ControllerPage()),
                         );
                         break;
-                      case 4: //History
+                      case 3: //History
                         Navigator.of(context).push(
                           MaterialPageRoute(
                               builder: (context) => const ControllerPage()),
                         );
                         break;
-                      case 5: //Settings
+                      case 4: //Settings
                         Navigator.of(context).push(
                           MaterialPageRoute(
                               builder: (context) => DashboardPage()),
                         );
                         break;
-                      case 6: //About Us
+                      case 5: //About Us
                         Navigator.of(context).push(
                           MaterialPageRoute(
                               builder: (context) => const AboutUsPage()),
                         );
                         break;
-                      case 7: //Exit
+                      case 6: //Exit
                         SystemNavigator.pop();
                     }
                   },
