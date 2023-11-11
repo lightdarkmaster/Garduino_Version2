@@ -25,7 +25,7 @@ class _ControllerPageState extends State<ControllerPage> {
     });
 
     // Implement the logic for sending power on/off command to the remote device
-    print('Device power ${_isDeviceOn ? 'on' : 'off'}');
+    //print('Device power ${_isDeviceOn ? 'on' : 'off'}');
     // You can replace the print statement with actual command sending logic
   }
 
@@ -130,6 +130,7 @@ class _ControllerPageState extends State<ControllerPage> {
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
+        // ignore: deprecated_member_use
         primary: const Color(0xFF21222D),
         side: const BorderSide(color: Colors.white),
         minimumSize: Size(buttonSize, buttonSize),
@@ -139,6 +140,7 @@ class _ControllerPageState extends State<ControllerPage> {
         children: [
           SvgPicture.asset(
             iconPath,
+            // ignore: deprecated_member_use
             color: Colors.white, // Apply color to the icon if needed
             width: 48, // Adjust the width of the SVG
             height: 48, // Adjust the height of the SVG

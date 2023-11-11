@@ -105,6 +105,7 @@ class _ProfileInfoRow extends StatelessWidget {
           ),
           Text(
             item.title,
+            // ignore: deprecated_member_use
             style: Theme.of(context).textTheme.caption,
           )
         ],
