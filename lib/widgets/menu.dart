@@ -7,6 +7,7 @@ import 'package:garduino_dashboard/main.dart';
 import 'package:garduino_dashboard/model/menu_modal.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:garduino_dashboard/widgets/dashboard_page.dart';
+import 'package:garduino_dashboard/widgets/notifications.dart';
 import 'package:garduino_dashboard/widgets/settings_page.dart';
 
 import 'controller_page.dart';
@@ -92,7 +93,7 @@ class _MenuState extends State<Menu> {
                       case 2: //Notification
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                              builder: (context) => const ControllerPage()),
+                              builder: (context) => const NotificationPage()),
                         );
                         break;
                       case 3: //History

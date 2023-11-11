@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SettingsPage2 extends StatefulWidget {
@@ -9,14 +8,18 @@ class SettingsPage2 extends StatefulWidget {
 }
 
 class _SettingsPage2State extends State<SettingsPage2> {
-  bool _isDark = false;
+  //bool _isDark = false;
+  bool _isLight = false;
+
   @override
   Widget build(BuildContext context) {
     return Theme(
-      data: _isDark ? ThemeData.dark() : ThemeData.light(),
+      data: _isLight ? ThemeData.dark() : ThemeData.light(),
       child: Scaffold(
         appBar: AppBar(
           title: const Text("Settings"),
+          backgroundColor:
+              const Color(0xFF171821), // Set the background color to black
         ),
         body: Center(
           child: Container(
@@ -27,49 +30,36 @@ class _SettingsPage2State extends State<SettingsPage2> {
                   title: "General",
                   children: [
                     _CustomListTile(
-                        title: "Dark Mode",
-                        icon: Icons.dark_mode_outlined,
-                        trailing: Switch(
-                            value: _isDark,
-                            onChanged: (value) {
-                              setState(() {
-                                _isDark = value;
-                              });
-                            })),
-                    const _CustomListTile(
-                        title: "Notifications",
-                        icon: Icons.notifications_none_rounded),
-                    const _CustomListTile(
-                        title: "Security Status",
-                        icon: CupertinoIcons.lock_shield),
+                      title: "Dark Mode",
+                      icon: Icons.dark_mode_outlined,
+                      trailing: Switch(
+                        value: _isLight,
+                        onChanged: (value) {
+                          setState(() {
+                            _isLight = value;
+                          });
+                        },
+                      ),
+                    ),
                   ],
                 ),
                 const Divider(),
                 const _SingleSection(
                   title: "Organization",
                   children: [
-                    _CustomListTile(
-                        title: "Profile", icon: Icons.person_outline_rounded),
-                    _CustomListTile(
-                        title: "Messaging", icon: Icons.message_outlined),
-                    _CustomListTile(
-                        title: "Calling", icon: Icons.phone_outlined),
-                    _CustomListTile(
-                        title: "People", icon: Icons.contacts_outlined),
-                    _CustomListTile(
-                        title: "Calendar", icon: Icons.calendar_today_rounded)
+                    //_CustomListTile(
+                    //title: "Profile", icon: Icons.person_outline_rounded),
+                    //_CustomListTile(
+                    //     title: "Calling", icon: Icons.phone_outlined),
                   ],
                 ),
                 const Divider(),
                 const _SingleSection(
                   children: [
                     _CustomListTile(
-                        title: "Help & Feedback",
-                        icon: Icons.help_outline_rounded),
-                    _CustomListTile(
-                        title: "About", icon: Icons.info_outline_rounded),
-                    _CustomListTile(
-                        title: "Sign out", icon: Icons.exit_to_app_rounded),
+                      title: "Help & Feedback",
+                      icon: Icons.help_outline_rounded,
+                    ),
                   ],
                 ),
               ],
@@ -85,9 +75,13 @@ class _CustomListTile extends StatelessWidget {
   final String title;
   final IconData icon;
   final Widget? trailing;
-  const _CustomListTile(
-      {Key? key, required this.title, required this.icon, this.trailing})
-      : super(key: key);
+
+  const _CustomListTile({
+    Key? key,
+    required this.title,
+    required this.icon,
+    this.trailing,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -103,6 +97,7 @@ class _CustomListTile extends StatelessWidget {
 class _SingleSection extends StatelessWidget {
   final String? title;
   final List<Widget> children;
+
   const _SingleSection({
     Key? key,
     this.title,
