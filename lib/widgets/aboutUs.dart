@@ -6,6 +6,10 @@ class AboutUsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('About Us'),
+        backgroundColor: const Color(0xFF171821),
+      ),
       body: Column(
         children: [
           const Expanded(flex: 2, child: _TopPortion()),
@@ -36,7 +40,7 @@ class AboutUsPage extends StatelessWidget {
                       const SizedBox(width: 16.0),
                       FloatingActionButton.extended(
                         onPressed: () {},
-                        heroTag: 'mesage',
+                        heroTag: 'message',
                         elevation: 0,
                         backgroundColor: Colors.red,
                         label: const Text("Message"),
