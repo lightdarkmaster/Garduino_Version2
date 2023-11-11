@@ -11,14 +11,17 @@ class dashboard_page extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: DashboardPage(),
     );
   }
 }
 
 class DashboardPage extends StatefulWidget {
+  const DashboardPage({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _DashboardPageState createState() => _DashboardPageState();
 }
 

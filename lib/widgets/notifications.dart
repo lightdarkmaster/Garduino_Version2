@@ -41,7 +41,9 @@ class NotificationPage extends StatelessWidget {
                           const SizedBox(height: 8),
                           Text(
                             "${item.author} · ${item.postedOn}",
-                            style: Theme.of(context).textTheme.caption,
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodySmall, //.caption
                           ),
                           const SizedBox(height: 8),
                           Row(
