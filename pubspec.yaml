@@ -17,13 +17,6 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_svg: ^2.0.5
   fl_chart: ^0.62.0
-  firebase_core: ^2.15.0
-  firebase_analytics: ^10.4.4
-  firebase_auth: ^4.7.2
-  firebase_database: ^10.2.4
-  firebase_remote_config: ^4.2.4
-  firebase_storage: ^11.2.5
-  cloud_firestore: ^4.8.4
   connectivity: ^3.0.6
   wifi: ^0.1.5
   wifi_info_flutter: ^2.0.2

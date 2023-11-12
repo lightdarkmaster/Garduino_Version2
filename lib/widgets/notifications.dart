@@ -104,47 +104,50 @@ class Article {
 
 final List<Article> _articles = [
   Article(
-    title: "Instagram quietly limits ‘daily time limit’ option",
-    author: "MacRumors",
-    imageUrl: "https://picsum.photos/id/1000/960/540",
-    postedOn: "Yesterday",
+    title: "Cabbage Need Waters ‘daily time limit’ option",
+    author: "Garduino App",
+    imageUrl:
+        "https://www.asiafarming.com/wp-content/uploads/2018/03/Cabbage-Plantation..jpg",
+    postedOn: "Today: 10:29am",
   ),
   Article(
-    title: "Google Search dark theme goes fully black for some on the web",
-    imageUrl: "https://picsum.photos/id/1010/960/540",
-    author: "9to5Google",
+    title: "Soil Moisture Level Dropdown",
+    imageUrl:
+        "https://www.thespruce.com/thmb/pgG0d_CaZm9-aXo9lAN_F0eS_js=/960x0/filters:no_upscale():max_bytes(150000):strip_icc()/healthy-soil-and-how-to-make-it-2539853-hero-fdf9b0280dca41cb8ae9614e6fc4a0b0.jpg",
+    author: "Garduino App",
     postedOn: "4 hours ago",
   ),
   Article(
-    title: "Check your iPhone now: warning signs someone is spying on you",
-    author: "New York Times",
-    imageUrl: "https://picsum.photos/id/1001/960/540",
+    title: "WARNING: Water Level in Low Level",
+    author: "Garduino App",
+    imageUrl:
+        "https://assets-global.website-files.com/5d162672099ac31ecbb72092/5d684ef596d109f2e6fb0cf4_2019-05-27_-_social_media_warning_labels.jpeg",
     postedOn: "2 days ago",
   ),
   Article(
-    title:
-        "Amazon’s incredibly popular Lost Ark MMO is ‘at capacity’ in central Europe",
-    author: "MacRumors",
-    imageUrl: "https://picsum.photos/id/1002/960/540",
+    title: "BULB status: OFF",
+    author: "Garduino App",
+    imageUrl: "https://static.dezeen.com/uploads/2016/01/light-bulb-dezeen.jpg",
     postedOn: "22 hours ago",
   ),
   Article(
-    title:
-        "Panasonic's 25-megapixel GH6 is the highest resolution Micro Four Thirds camera yet",
-    author: "Polygon",
-    imageUrl: "https://picsum.photos/id/1020/960/540",
-    postedOn: "2 hours ago",
+    title: "Greenhouse Ventilation Status: ON",
+    author: "Garduino App",
+    imageUrl: "https://clipground.com/images/a-greenhouse-clipart-6.jpg",
+    postedOn: "4 hours ago",
   ),
   Article(
-    title: "Samsung Galaxy S22 Ultra charges strangely slowly",
-    author: "TechRadar",
-    imageUrl: "https://picsum.photos/id/1021/960/540",
+    title: "Garduino Roof Status: OFF",
+    author: "Garduino App",
+    imageUrl:
+        "https://cdn2.vectorstock.com/i/1000x1000/51/51/greenhouse-single-icon-in-cartoon-style-vector-17095151.jpg",
     postedOn: "10 days ago",
   ),
   Article(
-    title: "Snapchat unveils real-time location sharing",
-    author: "Fox Business",
-    imageUrl: "https://picsum.photos/id/1060/960/540",
-    postedOn: "10 hours ago",
+    title: "Garduino Roof Status: ON",
+    author: "Garduino App",
+    imageUrl:
+        "https://cdn2.vectorstock.com/i/1000x1000/51/51/greenhouse-single-icon-in-cartoon-style-vector-17095151.jpg",
+    postedOn: "10 days ago",
   ),
 ];
