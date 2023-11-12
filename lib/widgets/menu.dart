@@ -26,6 +26,7 @@ class _MenuState extends State<Menu> {
   List<MenuModel> menu = [
     MenuModel(icon: 'assets/svg/home.svg', title: "Dashboard"),
     MenuModel(icon: 'assets/svg/remote.svg', title: "Controller"),
+    //I just remove some stuff in this code that I think it will not needed soon.
     //MenuModel(icon: 'assets/svg/share-2.svg', title: "Connect"),
     MenuModel(icon: 'assets/svg/bell.svg', title: "Notification"),
     MenuModel(icon: 'assets/svg/history.svg', title: "History"),
