@@ -22,6 +22,7 @@ class Menu extends StatefulWidget {
   _MenuState createState() => _MenuState();
 }
 
+//menu page widgets..
 class _MenuState extends State<Menu> {
   List<MenuModel> menu = [
     MenuModel(icon: 'assets/svg/home.svg', title: "Dashboard"),
