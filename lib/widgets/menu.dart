@@ -118,6 +118,7 @@ class _MenuState extends State<Menu> {
                         break;
                       case 6: //Exit
                         SystemNavigator.pop();
+                      //close the application
                     }
                   },
                   child: Row(
