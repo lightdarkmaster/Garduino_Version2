@@ -1,7 +1,4 @@
-// ignore: file_names
 import 'package:flutter/material.dart';
-
-//This is all about the about us page
 
 class AboutUsPage extends StatelessWidget {
   const AboutUsPage({Key? key}) : super(key: key);
@@ -30,29 +27,22 @@ class AboutUsPage extends StatelessWidget {
                         ?.copyWith(fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 16),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      FloatingActionButton.extended(
-                        onPressed: () {},
-                        heroTag: 'follow',
-                        elevation: 0,
-                        label: const Text("Follow"),
-                        icon: const Icon(Icons.person_add_alt_1),
+                  // Remove the button row and add a card with description
+                  Card(
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Column(
+                        children: const [
+                          Text(
+                            "Welcome to Team Cahaya. We are a passionate team dedicated to bringing light and innovation to the world.",
+                            textAlign: TextAlign.center,
+                          ),
+                          SizedBox(height: 16),
+                          _ProfileInfoRow(),
+                        ],
                       ),
-                      const SizedBox(width: 16.0),
-                      FloatingActionButton.extended(
-                        onPressed: () {},
-                        heroTag: 'message',
-                        elevation: 0,
-                        backgroundColor: Colors.red,
-                        label: const Text("Message"),
-                        icon: const Icon(Icons.message_rounded),
-                      ),
-                    ],
+                    ),
                   ),
-                  const SizedBox(height: 16),
-                  const _ProfileInfoRow()
                 ],
               ),
             ),
@@ -81,12 +71,13 @@ class _ProfileInfoRow extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: _items
             .map((item) => Expanded(
-                    child: Row(
-                  children: [
-                    if (_items.indexOf(item) != 0) const VerticalDivider(),
-                    Expanded(child: _singleItem(context, item)),
-                  ],
-                )))
+                  child: Row(
+                    children: [
+                      if (_items.indexOf(item) != 0) const VerticalDivider(),
+                      Expanded(child: _singleItem(context, item)),
+                    ],
+                  ),
+                ))
             .toList(),
       ),
     );
