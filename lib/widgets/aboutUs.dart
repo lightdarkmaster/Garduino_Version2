@@ -21,16 +21,17 @@ class AboutUsPage extends StatelessWidget {
                 children: [
                   Text(
                     "TEAM CAHAYA",
-                    style: Theme.of(context)
-                        .textTheme
-                        .titleLarge
-                        ?.copyWith(fontWeight: FontWeight.bold),
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                        fontWeight: FontWeight.bold, color: Colors.white),
                   ),
                   const SizedBox(height: 16),
-                  // Remove the button row and add a card with description
+                  // Updated the card style
                   Card(
                     margin: const EdgeInsets.symmetric(vertical: 8.0),
-                    elevation: 4.0,
+                    elevation: 8.0,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16.0),
+                    ),
                     child: Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: Column(
@@ -38,6 +39,10 @@ class AboutUsPage extends StatelessWidget {
                           Text(
                             "Welcome to Team Cahaya. We are a passionate team dedicated to bringing light and innovation to the world. Each member of our dynamic team contributes a unique set of skills and expertise, creating a synergy that drives us towards excellence.",
                             textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 16.0,
+                              color: Colors.white,
+                            ),
                           ),
                           SizedBox(height: 16),
                         ],
