@@ -40,7 +40,6 @@ class AboutUsPage extends StatelessWidget {
                             textAlign: TextAlign.center,
                           ),
                           SizedBox(height: 16),
-                          _ProfileInfoRow(),
                         ],
                       ),
                     ),
@@ -60,12 +59,6 @@ class AboutUsPage extends StatelessWidget {
 class _ProfileInfoRow extends StatelessWidget {
   const _ProfileInfoRow({Key? key}) : super(key: key);
 
-  final List<ProfileInfoItem> _items = const [
-    ProfileInfoItem("Posts", 900),
-    ProfileInfoItem("Followers", 120),
-    ProfileInfoItem("Following", 200),
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -73,46 +66,12 @@ class _ProfileInfoRow extends StatelessWidget {
       constraints: const BoxConstraints(maxWidth: 400),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: _items
-            .map((item) => Expanded(
-                  child: Row(
-                    children: [
-                      if (_items.indexOf(item) != 0) const VerticalDivider(),
-                      Expanded(child: _singleItem(context, item)),
-                    ],
-                  ),
-                ))
-            .toList(),
+        children: const [
+          // Removed the Posts, Followers, and Following sections
+        ],
       ),
     );
   }
-
-  Widget _singleItem(BuildContext context, ProfileInfoItem item) => Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              item.value.toString(),
-              style: const TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
-              ),
-            ),
-          ),
-          Text(
-            item.title,
-            // ignore: deprecated_member_use
-            style: Theme.of(context).textTheme.caption,
-          )
-        ],
-      );
-}
-
-class ProfileInfoItem {
-  final String title;
-  final int value;
-  const ProfileInfoItem(this.title, this.value);
 }
 
 class _TopPortion extends StatelessWidget {
