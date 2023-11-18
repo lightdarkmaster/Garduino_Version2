@@ -29,12 +29,14 @@ class AboutUsPage extends StatelessWidget {
                   const SizedBox(height: 16),
                   // Remove the button row and add a card with description
                   Card(
+                    margin: const EdgeInsets.symmetric(vertical: 8.0),
+                    elevation: 4.0,
                     child: Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: Column(
                         children: const [
                           Text(
-                            "Welcome to Team Cahaya. We are a passionate team dedicated to bringing light and innovation to the world.",
+                            "Welcome to Team Cahaya. We are a passionate team dedicated to bringing light and innovation to the world. Each member of our dynamic team contributes a unique set of skills and expertise, creating a synergy that drives us towards excellence.",
                             textAlign: TextAlign.center,
                           ),
                           SizedBox(height: 16),
@@ -43,6 +45,8 @@ class AboutUsPage extends StatelessWidget {
                       ),
                     ),
                   ),
+                  const SizedBox(height: 16),
+                  const _ProfileInfoRow(),
                 ],
               ),
             ),
