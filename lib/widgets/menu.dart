@@ -12,6 +12,7 @@ import 'package:garduino_dashboard/widgets/settings_page.dart';
 
 import 'controller_page.dart';
 import 'aboutUs.dart';
+import 'cultivatePage.dart';
 
 class Menu extends StatefulWidget {
   final GlobalKey<ScaffoldState> scaffoldKey;
@@ -116,7 +117,13 @@ class _MenuState extends State<Menu> {
                               builder: (context) => const AboutUsPage()),
                         );
                         break;
-                      case 6: //Exit
+                      case 6: //Cultivate Crops
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: (context) => const CultivatePage()),
+                        );
+                        break;
+                      case 7: //Exit
                         SystemNavigator.pop();
                       //close the application
                     }
