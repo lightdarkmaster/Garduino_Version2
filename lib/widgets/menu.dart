@@ -34,6 +34,7 @@ class _MenuState extends State<Menu> {
     MenuModel(icon: 'assets/svg/history.svg', title: "History"),
     MenuModel(icon: 'assets/svg/setting.svg', title: "Settings"),
     MenuModel(icon: 'assets/svg/profile.svg', title: "About Us"),
+    MenuModel(icon: 'assets/svg/slack.svg', title: "Cultivate"),
     MenuModel(icon: 'assets/svg/signout.svg', title: "Exit"),
   ];
 
