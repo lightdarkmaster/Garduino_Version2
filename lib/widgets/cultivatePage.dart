@@ -15,7 +15,8 @@ class _CultivatePageState extends State<CultivatePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Cultivate Page'),
+        title: const Text('Cultivate Plant'),
+        backgroundColor: const Color(0xFF171821),
       ),
       body: const Center(
         child: Text('Welcome to Cultivate Page!'),
