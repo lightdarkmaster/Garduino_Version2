@@ -19,7 +19,7 @@ class _CultivatePageState extends State<CultivatePage> {
         backgroundColor: const Color(0xFF171821),
       ),
       body: const Center(
-        child: Text('Welcome to Cultivate Page!'),
+        child: Text('Welcome to Cultivate Page! this is a cultivate pages'),
       ),
       // Add more widgets or customize as needed
     );
