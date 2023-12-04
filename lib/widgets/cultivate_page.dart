@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CultivatePage extends StatefulWidget {
-  const CultivatePage({super.key});
+  const CultivatePage({Key? key}) : super(key: key);
 
   @override
-  // ignore: library_private_types_in_public_api
   _CultivatePageState createState() => _CultivatePageState();
 }
 
@@ -18,8 +17,24 @@ class _CultivatePageState extends State<CultivatePage> {
         title: const Text('Cultivate Plant'),
         backgroundColor: const Color(0xFF171821),
       ),
-      body: const Center(
-        child: Text('Welcome to Cultivate Page! this is a cultivate pages'),
+      body: Center(
+        child: Card(
+          margin: const EdgeInsets.all(16.0),
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: const [
+                Text(
+                  'Welcome to Cultivate Page! This is a cultivate page.',
+                  style: TextStyle(fontSize: 18.0),
+                ),
+                SizedBox(height: 16.0),
+                // Add more widgets within the card if needed
+              ],
+            ),
+          ),
+        ),
       ),
       // Add more widgets or customize as needed
     );
