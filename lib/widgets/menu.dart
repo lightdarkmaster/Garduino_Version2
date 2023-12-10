@@ -12,7 +12,7 @@ import 'package:garduino_dashboard/widgets/settings_page.dart';
 
 import 'controller_page.dart';
 import 'aboutUs.dart';
-import 'cultivatePage.dart';
+import 'cultivate_page.dart';
 
 class Menu extends StatefulWidget {
   final GlobalKey<ScaffoldState> scaffoldKey;
