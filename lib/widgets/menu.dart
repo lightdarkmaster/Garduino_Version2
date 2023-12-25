@@ -159,3 +159,4 @@ class _MenuState extends State<Menu> {
   }
 }
 //components should works well in different platforms.
+//add connection to firebase.
