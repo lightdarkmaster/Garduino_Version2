@@ -18,8 +18,8 @@ dependencies:
   flutter_svg: ^2.0.5
   fl_chart: ^0.62.0
   connectivity: ^3.0.6
-  wifi: ^0.1.5
-  wifi_info_flutter: ^2.0.2
+  #wifi: ^0.1.5
+  #wifi_info_flutter: ^2.0.2
 
 dev_dependencies:
   flutter_launcher_icons: "^0.13.1"
